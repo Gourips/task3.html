@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animal</title>
+<style>
+</head>
+<body>  {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;  
+    background-color: #f0f0f0;
+}  
+
+h1 {
+    color: #333;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: blue;
+
+</style>
+</head>
+<body>
+
+    <h1 id="animalName">Tiger!</h1>
+
+    <div id="message"></div>
+
+    <script>
+        const animalName = document.getElementById('animalName');
+        const message = document.getElementById('message');
+
+        const originalName = "Tiger";
+        const nickname = "Tiggy";
+
+        animalName.addEventListener('click', () => {
+            if (animalName.textContent === originalName) {
+                animalName.textContent = nickname;
+                message.textContent = "You clicked the name!";
+            } else {
+                animalName.textContent = originalName;
+                message.textContent = "";
+            }
+           });
+    </script>
+    </body>
+    </html>
